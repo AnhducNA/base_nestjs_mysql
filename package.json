@@ -11,6 +11,8 @@
     "typeorm:create": "typeorm migration:create src/databases/migration/create-aa-table",
     "typeorm:run": "npm run build && npm run typeorm -- migration:run",
     "typeorm:revert": "npm run build && npm run typeorm -- migration:revert",
+    "db:seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed -n ./src/databases/config/orm.config.seed.ts",
+    "db:refresh": "npm run migration:run && npm run db:seed",
     "start": "nest start",
     "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -32,7 +34,8 @@
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "sqlite3": "^5.1.7",
-    "typeorm": "^0.3.20"
+    "typeorm": "^0.3.20",
+    "typeorm-seeding": "^1.6.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
