@@ -14,9 +14,9 @@ export class Videos extends BaseEntity {
   @Column({ name: 'user_id' })
   userId: number;
 
-  @Column()
+  @Column({ nullable: true })
   link: string;
 
-  @Column()
+  @Column({ default: 'pending' })
   status: string;
 }

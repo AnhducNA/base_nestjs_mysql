@@ -38,6 +38,7 @@ export class createVideosTable1730478347502 implements MigrationInterface {
             name: 'status',
             type: 'varchar(255)',
             isNullable: true,
+            default: 'pending',
           },
           {
             name: 'created_at',
