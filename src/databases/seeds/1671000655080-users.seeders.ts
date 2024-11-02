@@ -23,10 +23,10 @@ export default class CreateUsers implements Seeder {
       },
       {
         id: 2,
-        email: 'hr@gmail.com',
+        email: 'user@gmail.com',
         password:
           '$2b$10$8NoeFbeBargsDsClhpfkDexfk0RtV6kDSJa/yTOwJ3Wbo3n6e3k/.', //123456
-        role: RoleEnum.HR,
+        role: RoleEnum.USER,
         created_at: new Date(
           new Date().setDate(firstThisWeek - 7),
         ).toISOString(),
@@ -36,36 +36,10 @@ export default class CreateUsers implements Seeder {
       },
       {
         id: 3,
-        email: 'hr2@gmail.com',
-        password:
-          '$2b$10$8NoeFbeBargsDsClhpfkDexfk0RtV6kDSJa/yTOwJ3Wbo3n6e3k/.', //123456
-        role: RoleEnum.HR,
-        created_at: new Date(
-          new Date().setDate(firstThisWeek - 7),
-        ).toISOString(),
-        updated_at: new Date(
-          new Date().setDate(firstThisWeek - 7),
-        ).toISOString(),
-      },
-      {
-        id: 4,
-        email: 'user@gmail.com',
-        password:
-          '$2b$10$8NoeFbeBargsDsClhpfkDexfk0RtV6kDSJa/yTOwJ3Wbo3n6e3k/.', //123456
-        role: RoleEnum.CANDIDATE,
-        created_at: new Date(
-          new Date().setDate(firstThisWeek - 7),
-        ).toISOString(),
-        updated_at: new Date(
-          new Date().setDate(firstThisWeek - 7),
-        ).toISOString(),
-      },
-      {
-        id: 5,
         email: 'user2@gmail.com',
         password:
           '$2b$10$8NoeFbeBargsDsClhpfkDexfk0RtV6kDSJa/yTOwJ3Wbo3n6e3k/.', //123456
-        role: RoleEnum.CANDIDATE,
+        role: RoleEnum.USER,
         created_at: new Date(
           new Date().setDate(firstThisWeek - 7),
         ).toISOString(),
