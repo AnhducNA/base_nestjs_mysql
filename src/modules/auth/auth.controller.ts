@@ -29,6 +29,7 @@ export class AuthController extends BaseController {
       res,
     );
   }
+
   @Post('register')
   async register(@Body() registerDto: RegisterDto, @Res() res: Response) {
     try {
