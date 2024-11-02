@@ -1,20 +1,22 @@
 import 'reflect-metadata';
 import { Entity, PrimaryGeneratedColumn, Column, Index } from 'typeorm';
 import { BaseEntity } from '@entities/base.entity';
-import { RoleEnum } from '@common/enum/role.enum';
 
-@Entity('users')
-export class Users extends BaseEntity {
+@Entity('videos')
+export class Videos extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ name: 'task_id' })
   @Index({ unique: true })
-  email: string;
+  taskId: string;
+
+  @Column({ name: 'user_id' })
+  userId: number;
 
   @Column()
-  password: string;
+  link: string;
 
   @Column()
-  role: RoleEnum;
+  status: string;
 }
