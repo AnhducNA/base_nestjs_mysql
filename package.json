@@ -12,7 +12,7 @@
     "typeorm:run": "npm run build && npm run typeorm -- migration:run",
     "typeorm:revert": "npm run build && npm run typeorm -- migration:revert",
     "db:seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed -n ./src/databases/config/orm.config.seed.ts",
-    "db:refresh": "npm run migration:run && npm run db:seed",
+    "db:refresh": "npm run typeorm:run && npm run db:seed",
     "start": "nest start",
     "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
